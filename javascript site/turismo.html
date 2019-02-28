@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>Lugares que visitar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" integrity="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="notas">
+        <p>Una vez mas, hablo de los distintos tipos de turismo que se puede hacer en españa. Las diapositivas de texto cambian gracias a javascript.</p>
+        </div>
+
+
+<section class="infoslide">
+
+
+
+  <div class="slider">
+   
+
+
+<div class="slideshow-container">
+<!--Llamamos a las funciones para pasar de página, sumando o restando-->
+<a class="prev" onclick="plusSlides(-1)"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
+<a class="next" onclick="plusSlides(1)"><i class="fas fa-arrow-circle-right fa-2x"></i></a>
+  <div class="diapositiva">
+    <h2>1. Cultural.</h2>
+    <p >Motivado por el deseo de ampliar conocimientos, asistir a actos culturales (monumentos, exposiciones, museos), etc.</p>
+    <img src="https://picsum.photos/200/300?image=885" alt="">
+  </div>
+
+<div class="diapositiva">
+  <h2>2. De sol y playa.</h2>
+<p>Centrado en las zonas costeras en época de verano.</p>
+<img src="https://picsum.photos/200/300?image=1001" alt="">
+</div>
+
+<div class="diapositiva">
+  <h2>3. De nieve</h2>
+<p>Dirigido a la zona de montaña en época de invierno.</p>
+<img src="https://picsum.photos/200/300?image=1036" alt="">
+</div>
+
+<div class="diapositiva">
+    <h2>4. Rural</h2>
+<p>Enfocado a alejarse de la vida urbana y acercarse a la vida rural.</p>
+<img src="https://picsum.photos/200/300?image=1065" alt="">
+</div>
+
+
+
+</div>
+
+
+
+<script>
+var slideIndex = 1; //Inicializada en 1
+showSlides(slideIndex);
+
+function plusSlides(n) { //Esta funcion suma 1 o resta 1 showslides
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) { //n representa el numero de indice en el que estamos
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("diapositiva"); // getElementsByClassName Devuelve un objecto similar a un array de los elementos "diapositiva".
+
+  if (n > slides.length) {slideIndex = 1} //Si n es mayor que el nº de diapositivas, pasa a ser 1 de nuevo
+  if (n < 1) {slideIndex = slides.length} //Si n es menor que uno, pasaria a ser igual al nº de diapositivas
+  for (i = 0; i < slides.length; i++) { //Con for recorremos el array
+      slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+
+}
+</script>
+  </div>
+
+</section>
+
+
+
+
+</body>
+</html>
